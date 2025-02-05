@@ -59,6 +59,7 @@
         }
 
         .nourak img {
+            max-width: 100%;
             width: 800px;
             height: auto;
         }
@@ -82,11 +83,12 @@
             max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
             width: 300px;
             height: auto;
+            padding-top: 63px;
         }
 
         .social-icons {
             text-align: center; /* Centraliza os ícones */
-            margin-top: 20px; /* Espaçamento entre a imagem e os ícones */
+            margin-top: 10px; /* Espaçamento entre a imagem e os ícones */
             position: relative;
             z-index: 1001;
         }
@@ -126,7 +128,7 @@
 
         .fixed-text {
             position: absolute;
-            bottom: -400px;
+            bottom: -500px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -135,7 +137,7 @@
         }
 
         .fixed-text img {
-            width: 700px;
+            width: 600px;
             height: auto;
         }
 
@@ -174,7 +176,7 @@
         }
         
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             body {
                 width: 100%; /* Permite que o body ocupe toda a largura da tela */
                 padding: 10px;
@@ -182,7 +184,7 @@
 
             .header img {
                 width: 100%; /* A imagem de cabeçalho ocupa toda a largura da tela */
-                max-width: none;
+                max-width: 800px;
             }
 
             .social-icons {
