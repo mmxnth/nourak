@@ -139,6 +139,41 @@
             height: auto;
         }
 
+        /* Estilos para a barra de pesquisa */
+        #search-bar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            z-index: 1002;
+            border: 1px solid rgb(68, 68, 68);
+        }
+
+        #search-bar input {
+            background: transparent;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            padding: 5px;
+            width: 150px;
+            border-radius: 3px;
+        }
+
+        #search-bar button {
+            background: transparent;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        
+
         @media (max-width: 768px) {
             body {
                 width: 100%; /* Permite que o body ocupe toda a largura da tela */
@@ -188,6 +223,12 @@
         <img src="imagens/copyright.png" alt="Copyright information">
     </div>
 
+    <!-- Barra de pesquisa -->
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="">
+        <button onclick="checkPassword()">Enter</button>
+    </div>
+
     <!-- Áudio -->
     <audio id="background-music" loop>
         <source src="imagens/backgroundmusic.mp3" type="audio/mpeg">
@@ -209,6 +250,19 @@
                 musicIcon.src = "imagens/play-buttton.png";
             }
         });
+
+        // Função para verificar a senha e redirecionar
+        function checkPassword() {
+            const password = document.getElementById('search-input').value;
+            const correctPassword = 'never ending search for light';
+            const redirectUrl = 'https://soundcloud.com/mmxnth'; // Substitua pelo seu link
+
+            if (password === correctPassword) {
+                window.open(redirectUrl, '_blank');
+            } else {
+                alert('Wrong Password!');
+            }
+        }
     </script>
 </body>
 
