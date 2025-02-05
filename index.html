@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>noûrak - Artist</title>
+    <meta name="description" content="noûrak is an artist exploring the boundaries of sound and visual art. Discover my journey on Instagram and SoundCloud.">
+    <meta name="keywords" content="noûrak, artist, music, soundcloud, instagram, visual art">
+    <meta name="author" content="noûrak">
+    
+    <!-- Open Graph / Facebook (Para compartilhamento no Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=""> <!-- Substitua pelo link do seu site -->
+    <meta property="og:title" content="noûrak - Artist">
+    <meta property="og:description" content="noûrak is an artist exploring the boundaries of sound and visual art. Discover my journey on Instagram and SoundCloud.">
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1RVMUDZZiHJYJAvtRu3mYeUEixtgpgoU4
+    "> <!-- Substitua pelo link da imagem do seu site -->
+
+    <!-- Twitter (Para compartilhamento no Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content=""> <!-- Substitua pelo link do seu site -->
+    <meta property="twitter:title" content="noûrak - Artist">
+    <meta property="twitter:description" content="noûrak is an artist exploring the boundaries of sound and visual art. Discover my journey on Instagram and SoundCloud.">
+    <meta property="twitter:image" content="https://drive.google.com/uc?export=view&id=1RVMUDZZiHJYJAvtRu3mYeUEixtgpgoU4
+    "> <!-- Substitua pelo link da imagem do seu site -->
+
+    <!-- Ícone do site -->
+    <link rel="icon" href="imagens/ikkoo.png" type="image/icon type">
+
+    <!-- Estilos CSS -->
+    <style>
+        html, body {
+            height: 100%; /* Garante que o body ocupe toda a altura da viewport */
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .img {
+            max-width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 90px;
+        }
+
+        .p {
+            text-align: center;
+        }
+
+        .nourak {
+            text-align: center;
+            margin-top: -25%;
+        }
+
+        .nourak img {
+            width: 800px;
+            height: auto;
+        }
+
+        body {
+            width: 50%;
+            margin: auto;
+            background-image: url(imagens/rettetet.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: scroll;
+        }
+
+        .header {
+            text-align: center;
+            padding-top: 30%;
+        }
+
+        .header img {
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+            width: 300px;
+            height: auto;
+        }
+
+        .social-icons {
+            text-align: center; /* Centraliza os ícones */
+            margin-top: 20px; /* Espaçamento entre a imagem e os ícones */
+            position: relative;
+            z-index: 1001;
+        }
+
+        .social-icons a {
+            margin: 0 10px; /* Espaçamento entre os ícones */
+            text-decoration: none; /* Remove sublinhado dos links */
+            display: inline-block; /* Garante que os ícones se comportem como blocos */
+        }
+
+        .social-icons img {
+            width: 24px; /* Tamanho dos ícones */
+            height: 24px;
+            object-fit: contain;
+            transition: opacity 0.3s ease; /* Efeito de transição suave */
+        }
+
+        .social-icons img:hover {
+            opacity: 0.7; /* Efeito ao passar o mouse */
+        }
+
+        /* Estilos para o botão de play */
+        #music-control {
+            position: fixed; /* Fixa o botão na tela */
+            top: 20px; /* Distância do topo */
+            left: 20px; /* Distância da esquerda */
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+        }
+
+        #music-control img {
+            width: 32px; /* Tamanho do ícone */
+            height: 32px;
+        }
+
+        .fixed-text {
+            position: absolute;
+            bottom: -400px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 16px;
+            color: white;
+        }
+
+        .fixed-text img {
+            width: 700px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                width: 100%; /* Permite que o body ocupe toda a largura da tela */
+                padding: 10px;
+            }
+
+            .header img {
+                width: 100%; /* A imagem de cabeçalho ocupa toda a largura da tela */
+                max-width: none;
+            }
+
+            .social-icons {
+                flex-direction: column; /* Coloca os ícones em coluna no celular */
+            }
+
+            .nourak img {
+                width: 100%; /* A imagem também ocupa toda a largura da tela */
+                max-width: none;
+            }
+            }
+    </style>
+</head>
+
+<body>
+    <button id="music-control">
+        <img src="imagens/play-buttton.png" alt="Play música" id="music-icon">
+    </button>
+
+    <div class="header">
+        <img src="imagens/nurak.png" alt="noûrak logo">
+
+        <div class="social-icons">
+            <a href="https://instagram.com/nourakjourney" target="_blank" aria-label="Instagram">
+                <img src="imagens/ttttttttttttttttttt.png" alt="Instagram icon">
+            </a>
+            <a href="https://soundcloud.com/nnourak" target="_blank" aria-label="SoundCloud">
+                <img src="imagens/4691279_soundcloud_icon.png" alt="SoundCloud icon">
+            </a>
+        </div>
+    </div>
+
+    <div class="nourak">
+        <img src="imagens/rtttt.png" alt="noûrak artwork">
+    </div>
+
+    <div class="fixed-text">
+        <img src="imagens/copyright.png" alt="Copyright information">
+    </div>
+
+    <!-- Áudio -->
+    <audio id="background-music" loop>
+        <source src="imagens/backgroundmusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Seleciona os elementos de áudio, botão e ícone
+        const audio = document.getElementById('background-music');
+        const musicControl = document.getElementById('music-control');
+        const musicIcon = document.getElementById('music-icon');
+
+        // Adiciona um evento de clique ao botão
+        musicControl.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Inicia a música
+                musicIcon.src = "imagens/pause.png"; 
+            } else {
+                audio.pause(); // Pausa a música
+                musicIcon.src = "imagens/play-buttton.png";
+            }
+        });
+    </script>
+</body>
+
+</html>
