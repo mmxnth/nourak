@@ -54,14 +54,19 @@
         }
 
         .nourak {
+            display: flex;
+    align-items: center;
             text-align: center;
+            height: 100vh;
+            transform: translateX(-10px); /* Desloca a imagem 5px para a esquerda */ 
             margin-top: -25%;
         }
 
         .nourak img {
             max-width: 100%;
             width: 800px;
-            height: auto;
+            object-fit: contain;
+            
         }
 
         body {
@@ -127,18 +132,20 @@
         }
 
         .fixed-text {
-            position: absolute;
-            bottom: -500px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            padding: 40px 0;
+            
             text-align: center;
             font-size: 16px;
             color: white;
+            width: 100%;
+            margin-top: -700px;
         }
 
         .fixed-text img {
             width: 600px;
             height: auto;
+            max-width: 90%;
         }
 
         /* Estilos para a barra de pesquisa */
@@ -147,13 +154,14 @@
             top: 20px;
             right: 20px;
             background-color: rgba(255, 255, 255, 0.7);
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             padding: 5px;
             border-radius: 5px;
             display: flex;
             align-items: center;
             z-index: 1002;
             border: 1px solid rgb(68, 68, 68);
+            transition: width 0.3s ease, opacity 0.3s ease;
         }
 
         #search-bar input {
@@ -175,11 +183,17 @@
             margin-left: 5px;
         }
 
-          #search-bar button img {
+        #search-bar button img {
     width: 25px;
     height: 25px;
-        
 }
+
+#search-bar.open #search-input {
+    display: block;
+    width: 150px;
+}
+        
+
         @media (max-width: 1000px) {
             body {
                 width: 100%; /* Permite que o body ocupe toda a largura da tela */
@@ -192,12 +206,26 @@
             }
 
             .social-icons {
-                flex-direction: column; /* Coloca os ícones em coluna no celular */
+                flex-direction: row; /* Coloca os ícones em coluna no celular */
+                margin-top: 10px; /* Espaçamento entre a imagem e os ícones */
+            margin-bottom: -20px;
             }
 
             .nourak img {
                 width: 100%; /* A imagem também ocupa toda a largura da tela */
                 max-width: none;
+            }
+
+            .fixed-text {
+                margin-top: -240px;
+            }
+
+            #search-input {
+                display: none;
+            }
+
+            .nourak{
+                transform: translateX(-10px); /* Desloca a imagem 5px para a esquerda */ 
             }
             }
     </style>
@@ -234,9 +262,9 @@
 
     <!-- Barra de pesquisa -->
     <div id="search-bar">
-        <input type="text" id="search-input" placeholder="">
-        <button onclick="checkPassword()">
-            <img src="imagens/senha.png" alt="Cadeado" width="16" height="16">
+        <input type="text" id="search-input" placeholder="" />
+    <button type="button" onclick="handleSearchButtonClick()"> <!-- Alterado para type="button" -->
+        <img src="imagens/senha.png" alt="Cadeado" width="16" height="16">
         </button>
     </div>
 
@@ -263,17 +291,44 @@
         });
 
         // Função para verificar a senha e redirecionar
-        function checkPassword() {
-            const password = document.getElementById('search-input').value;
-            const correctPassword = 'never ending search for light';
-            const redirectUrl = 'https://soundcloud.com/mmxnth'; // Substitua pelo seu link
+        
 
-            if (password === correctPassword) {
-                window.open(redirectUrl, '_blank');
-            } else {
-                alert('pɹoʍssɐd ƃuoɹʍ');
-            }
+
+let isSearchOpened = false; // Variável de controle para saber se a barra foi aberta
+
+// Função para controlar o comportamento do botão de pesquisa
+function handleSearchButtonClick() {
+    if (window.innerWidth <= 800) { // Se for um dispositivo móvel
+        if (!isSearchOpened) {
+            // Abrir a barra de pesquisa no primeiro clique
+            document.getElementById("search-bar").classList.add("open");
+            document.getElementById("search-input").style.display = "block";
+            document.getElementById("search-input").focus(); // Foca no input
+            isSearchOpened = true; // Marca como aberto
+        } else {
+            // Funcionar como botão de "enter" após abrir
+            checkPassword(); // Chama a função de verificação de senha (ou outra ação desejada)
         }
+    } else {
+        // No desktop, sempre funciona como botão de "enter"
+        checkPassword();
+    }
+}
+
+// Função para verificar a senha e redirecionar
+function checkPassword() {
+    const password = document.getElementById('search-input').value;
+    const correctPassword = 'never ending search for light';
+    const redirectUrl = 'https://soundcloud.com/mmxnth'; // Substitua pelo seu link
+
+    if (password === correctPassword) {
+        window.open(redirectUrl, '_blank');
+    } else {
+        alert('pɹoʍssɐd ƃuoɹʍ');
+    }
+}
+
+        
     </script>
 </body>
 
