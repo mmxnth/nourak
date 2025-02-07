@@ -352,6 +352,8 @@ function checkPassword() {
                     clickCount = 0; // Reseta o contador se o usuário não clicar rapidamente
                 }, 1000);
             });
+            headerImage.addEventListener("click", handleClick);
+            headerImage.addEventListener("touchstart", handleClick);
         }
     });
 
@@ -361,7 +363,6 @@ function checkPassword() {
             img.addEventListener('contextmenu', event => event.preventDefault());
         });
     });
-
         
     </script>
 </body>
