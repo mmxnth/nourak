@@ -42,6 +42,9 @@
 
         .img {
             max-width: 100%;
+            pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
         }
 
         h2 {
@@ -350,6 +353,13 @@ function checkPassword() {
                 }, 1000);
             });
         }
+    });
+
+         document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(img => {
+            img.setAttribute('draggable', 'false');
+            img.addEventListener('contextmenu', event => event.preventDefault());
+        });
     });
 
         
