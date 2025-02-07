@@ -334,6 +334,24 @@ function checkPassword() {
     }
 }
 
+        document.addEventListener("DOMContentLoaded", function () {
+        let clickCount = 0;
+        const headerImage = document.querySelector(".header img");
+        
+        if (headerImage) {
+            headerImage.addEventListener("click", function () {
+                clickCount++;
+                if (clickCount === 3) {
+                    window.open("https://youtu.be/iL9_fysJZd4", "_blank");
+                    clickCount = 0; // Reseta o contador após abrir o link
+                }
+                setTimeout(() => {
+                    clickCount = 0; // Reseta o contador se o usuário não clicar rapidamente
+                }, 1000);
+            });
+        }
+    });
+
         
     </script>
 </body>
