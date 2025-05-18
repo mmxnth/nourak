@@ -10,29 +10,25 @@
     <meta name="keywords" content="noûrak, mxnth, artist, music, soundcloud, instagram, visual art">
     <meta name="author" content="noûrak">
     
-    <!-- Open Graph / Facebook (Para compartilhamento no Facebook) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="nourak.xyz"> <!-- Substitua pelo link do seu site -->
+    <meta property="og:url" content="nourak.xyz"> 
     <meta property="og:title" content="noûrak">
     <meta property="og:description" content="from chaos, invisible order is born">
     <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1RVMUDZZiHJYJAvtRu3mYeUEixtgpgoU4
-    "> <!-- Substitua pelo link da imagem do seu site -->
+    "> 
 
-    <!-- Twitter (Para compartilhamento no Twitter) -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="nourak.xyz"> <!-- Substitua pelo link do seu site -->
+    <meta property="twitter:url" content="nourak.xyz">
     <meta property="twitter:title" content="noûrak">
     <meta property="twitter:description" content="from chaos, invisible order is born">
     <meta property="twitter:image" content="https://drive.google.com/uc?export=view&id=1RVMUDZZiHJYJAvtRu3mYeUEixtgpgoU4
-    "> <!-- Substitua pelo link da imagem do seu site -->
+    "> 
 
-    <!-- Ícone do site -->
     <link rel="icon" href="imagens/ikkoo.png" type="image/icon type">
-
-    <!-- Estilos CSS -->
+    
     <style>
         html, body {
-            height: 100%; /* Garante que o body ocupe toda a altura da viewport */
+            height: 100%; 
             margin: 0;
         }
 
@@ -61,7 +57,7 @@
     align-items: center;
             text-align: center;
             height: 100vh;
-            transform: translateX(-10px); /* Desloca a imagem 5px para a esquerda */ 
+            transform: translateX(-10px);
             margin-top: -25%;
         }
 
@@ -88,49 +84,49 @@
         }
 
         .header img {
-            max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+            max-width: 100%; 
             width: 300px;
             height: auto;
             padding-top: 63px;
         }
 
         .social-icons {
-            text-align: center; /* Centraliza os ícones */
-            margin-top: 10px; /* Espaçamento entre a imagem e os ícones */
+            text-align: center; 
+            margin-top: 10px; 
             position: relative;
             z-index: 1001;
         }
 
         .social-icons a {
-            margin: 0 10px; /* Espaçamento entre os ícones */
-            text-decoration: none; /* Remove sublinhado dos links */
-            display: inline-block; /* Garante que os ícones se comportem como blocos */
+            margin: 0 10px; 
+            text-decoration: none; 
+            display: inline-block; 
         }
 
         .social-icons img {
-            width: 24px; /* Tamanho dos ícones */
+            width: 24px; 
             height: 24px;
             object-fit: contain;
-            transition: opacity 0.3s ease; /* Efeito de transição suave */
+            transition: opacity 0.3s ease; 
         }
 
         .social-icons img:hover {
-            opacity: 0.7; /* Efeito ao passar o mouse */
+            opacity: 0.7; 
         }
 
-        /* Estilos para o botão de play */
+        /* botão de play */
         #music-control {
-            position: fixed; /* Fixa o botão na tela */
-            top: 20px; /* Distância do topo */
-            left: 20px; /* Distância da esquerda */
+            position: fixed; 
+            top: 20px; 
+            left: 20px; 
             background: none;
             border: none;
             cursor: pointer;
-            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+            z-index: 1000; 
         }
 
         #music-control img {
-            width: 32px; /* Tamanho do ícone */
+            width: 32px; 
             height: 32px;
         }
 
@@ -151,7 +147,6 @@
             max-width: 90%;
         }
 
-        /* Estilos para a barra de pesquisa */
         #search-bar {
             position: fixed;
             top: 20px;
@@ -199,29 +194,29 @@
 
         @media (max-width: 1000px) {
             body {
-                width: 100%; /* Permite que o body ocupe toda a largura da tela */
+                width: 100%; 
                 padding: 10px;
             }
 
             .header img {
-                width: 100%; /* A imagem de cabeçalho ocupa toda a largura da tela */
+                width: 100%; 
                 max-width: 800px;
             }
 
             .social-icons {
-                display: flex; /* Garante que os ícones sejam exibidos lado a lado */
-                flex-direction: row; /* Coloca os ícones em coluna no celular */
+                display: flex; 
+                flex-direction: row; 
                 justify-content: center;
-                margin-top: 10px; /* Espaçamento entre a imagem e os ícones */
+                margin-top: 10px; 
             margin-bottom: -20px;
             }
 
              .social-icons a {
-        margin: 0 5px; /* Diminui o espaçamento entre os ícones */
+        margin: 0 5px; 
     }
 
             .nourak img {
-                width: 100%; /* A imagem também ocupa toda a largura da tela */
+                width: 100%; 
                 max-width: none;
             }
 
@@ -234,7 +229,7 @@
             }
 
             .nourak{
-                transform: translateX(-10px); /* Desloca a imagem 5px para a esquerda */ 
+                transform: translateX(-10px); 
             }
             }
     </style>
@@ -269,57 +264,53 @@
         <img src="imagens/copyright.png" alt="Copyright information">
     </div>
 
-    <!-- Barra de pesquisa -->
+    <!-- barra de pesquisa -->
     <div id="search-bar">
         <input type="text" id="search-input" placeholder="" />
-    <button type="button" onclick="handleSearchButtonClick()"> <!-- Alterado para type="button" -->
+    <button type="button" onclick="handleSearchButtonClick()"> 
         <img src="imagens/senha.png" alt="Cadeado" width="16" height="16">
         </button>
     </div>
 
-    <!-- Áudio -->
+    <!-- audio -->
     <audio id="background-music" loop>
         <source src="imagens/backgroundmusic.mp3" type="audio/mpeg">
     </audio>
 
     <script>
-        // Seleciona os elementos de áudio, botão e ícone
+       
         const audio = document.getElementById('background-music');
         const musicControl = document.getElementById('music-control');
         const musicIcon = document.getElementById('music-icon');
 
-        // Adiciona um evento de clique ao botão
+       
         musicControl.addEventListener('click', () => {
             if (audio.paused) {
-                audio.play(); // Inicia a música
+                audio.play();
                 musicIcon.src = "imagens/pause.png"; 
             } else {
-                audio.pause(); // Pausa a música
+                audio.pause(); 
                 musicIcon.src = "imagens/play-buttton.png";
             }
         });
 
-        // Função para verificar a senha e redirecionar
-        
+let isSearchOpened = false; 
 
 
-let isSearchOpened = false; // Variável de controle para saber se a barra foi aberta
-
-// Função para controlar o comportamento do botão de pesquisa
 function handleSearchButtonClick() {
-    if (window.innerWidth <= 800) { // Se for um dispositivo móvel
+    if (window.innerWidth <= 800) { 
         if (!isSearchOpened) {
-            // Abrir a barra de pesquisa no primeiro clique
+            
             document.getElementById("search-bar").classList.add("open");
             document.getElementById("search-input").style.display = "block";
-            document.getElementById("search-input").focus(); // Foca no input
-            isSearchOpened = true; // Marca como aberto
+            document.getElementById("search-input").focus(); 
+            isSearchOpened = true; 
         } else {
-            // Funcionar como botão de "enter" após abrir
-            checkPassword(); // Chama a função de verificação de senha (ou outra ação desejada)
+           
+            checkPassword(); 
         }
     } else {
-        // No desktop, sempre funciona como botão de "enter"
+        
         checkPassword();
     }
 }
@@ -328,7 +319,7 @@ function handleSearchButtonClick() {
 function checkPassword() {
     const password = document.getElementById('search-input').value;
     const correctPassword = 'never ending search for light';
-    const redirectUrl = 'https://soundcloud.com/mmxnth'; // Substitua pelo seu link
+    const redirectUrl = 'https://soundcloud.com/mmxnth'; 
 
     if (password === correctPassword) {
         window.open(redirectUrl, '_blank');
@@ -346,10 +337,10 @@ function checkPassword() {
                 clickCount++;
                 if (clickCount === 3) {
                     window.open("https://youtu.be/iL9_fysJZd4", "_blank");
-                    clickCount = 0; // Reseta o contador após abrir o link
+                    clickCount = 0; 
                 }
                 setTimeout(() => {
-                    clickCount = 0; // Reseta o contador se o usuário não clicar rapidamente
+                    clickCount = 0; 
                 }, 1000);
             });
             headerImage.addEventListener("click", handleClick);
